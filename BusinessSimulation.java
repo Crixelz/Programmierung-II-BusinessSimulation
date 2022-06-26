@@ -43,7 +43,7 @@ public class BusinessSimulation {
 			mainMenu.showMenu();
 
 			// Produktion durchfuehren
-			// produzierte Menge vor dem nächsten Rundenbeginn bei allen Niederlassungen abholen und einlagern
+			// produzierte Menge vor dem nÃ¤chsten Rundenbeginn bei allen Niederlassungen abholen und einlagern
 			int produzierteMenge;
 			Warenart produzierteWarenart;
 			System.out.println("========== Produzierte Mengen");
@@ -71,20 +71,20 @@ public class BusinessSimulation {
 
 	private Menu initMainMenu() {
 
-		// Untermenu für die Verwaltung der Niederlassungen und Transporte
-		Submenu subNiederlassung = new Submenu("Niederlassungen, Anforderungen verwalten", appContext, "Zurück");
+		// Untermenu fÃ¼r die Verwaltung der Niederlassungen und Transporte
+		Submenu subNiederlassung = new Submenu("Niederlassungen, Anforderungen verwalten", appContext, "ZurÃ¼ck");
 		subNiederlassung.setCommand(new CommandAnfordern());
 		subNiederlassung.setCommand(new CommandEinstellen());
 		subNiederlassung.setCommand(new CommandLoehneFestlegen());
 
-		// Untermenu für die Verwaltung der Fuhrwerke
-		Submenu subFuhrpark = new Submenu("Fuhrpark verwalten", appContext, "Zurück");
+		// Untermenu fÃ¼r die Verwaltung der Fuhrwerke
+		Submenu subFuhrpark = new Submenu("Fuhrpark verwalten", appContext, "ZurÃ¼ck");
 		subFuhrpark.setCommand(new CommandFuhrwerkeKaufen());
 		subFuhrpark.setCommand(new CommandFuhrwerkeVerkaufen());
 		// TODO CommandFuhrwerkeReparieren
 
 		// Hauptmenu
-		Menu mainMenu = new Menu("Hauptmenu", appContext, "");
+		Menu mainMenu = new Menu("Hauptmenu", appContext, "Back Button");
 		mainMenu.setCommand(new CommandVerkaufen());
 		mainMenu.setCommand(subNiederlassung);
 		mainMenu.setCommand(subFuhrpark);
